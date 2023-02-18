@@ -1,2 +1,2 @@
-# Daily-Coding-Challenges
-파이썬을 이용한 알고리즘 풀이
+# Daily-Coding-Test
+파이썬을 이용해서 코딩테스트 준비.
