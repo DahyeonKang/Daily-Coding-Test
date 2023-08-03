@@ -59,7 +59,7 @@ print(2)
 # 다른 분 코드
 n=int(input())
 print(n*(n-1)//2, 2, sep='\n')
-# 다른 붙 코드
+# 다른 분 코드
 a = int(input())
 print((a*(a-1))//2)
 print(2)
@@ -89,8 +89,47 @@ print(3)
 #     return sum;
 # }
 n = int(input())
-print()
+sum = 0
+for i in range(1, n-1):
+    sum += i * (i + 1) // 2
+print(sum)
 print(3)
+
+# 다른 분 코드
+n = int(input())
+print(((n-1) * (n-2) * 2 * n) // 12)
+print(3)
+# 다른 분 코드 : nC3 = n!/(3!(n-3)!) = n(n-1)(n-2)/3*2*1 = n(n-1)(n-2)/6.
+N = int(input())
+print((N * (N - 1) * (N - 2)) // 6)
+print(3)
+
+
+## 알고리즘 수업 - 점근적 표기 1
+## 문제 : f(n), c, n0가 O(n) 정의를 만족하면 1, 아니면 0을 출력한다.
+# f(n) = a1n + a0
+# O(g(n)) = {f(n) | 모든 n ≥ n0에 대하여 f(n) ≤ c × g(n)인 양의 상수 c와 n0가 존재한다}
+a1, a0 = map(int, input().split())
+c = int(input())
+n0 = int(input())
+
+if a1 < c:
+    if a0/(c-a1) <= n0:
+        print(1)
+    else:
+        print(0)
+elif a1 > c:
+    print(0)
+else:  # a1==c
+    if a0 == 0:
+        print(1)
+    else:
+        print(0)
+
+
+
+
+
 
 
 
