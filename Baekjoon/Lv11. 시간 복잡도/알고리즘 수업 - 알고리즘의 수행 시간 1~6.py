@@ -113,22 +113,33 @@ a1, a0 = map(int, input().split())
 c = int(input())
 n0 = int(input())
 
-if a1 < c:
-    if a0/(c-a1) <= n0:
-        print(1)
-    else:
-        print(0)
-elif a1 > c:
+if (a1*n0 + a0 <= c*n0) and (a1<=c):
+    print(1)
+else:
     print(0)
-else:  # a1==c
-    if a0 == 0:
-        print(1)
-    else:
-        print(0)
 
+# 틀린 코드
+# if a1 < c:
+#     if a0/(c-a1) <= n0:
+#         print(1)
+#     else:
+#         print(0)
+# elif a1 > c:
+#     print(0)
+# else:  # a1==c
+#     if a0 == 0:
+#         print(1)
+#     else:
+#         print(0)
 
+# 다른 분 코드
+a, b, c, d=map(int, open(0).read().split())
+print(+(a+b/d <= c >= a))
 
-
+# 다른 분 코드
+a,b=map(int,input().split())
+c,d=int(input()),int(input())
+print(1 if a*d+b<=c*d and a<=c else 0)
 
 
 
