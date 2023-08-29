@@ -5,22 +5,35 @@ import sys
 input = sys.stdin.readline
 N, M = map(int, input().split())
 board = [input().strip() for _ in range(N)]
-print(N, M)
-print(board)
+result = []
+# N, M = map(int, input().split())
+# board = []
+# result = []
+# for _ in range(N):
+#     board.append(input())
 
-if N == M == 8:
-    for row in board:
-        print(row)
-        if (row == 'WBWBWBWB') or (row == 'BWBWBWBW'):
-            pass
-        else:
-            print(row)
-                   
-else:
-    for row in board:
-        print()
-    
+for i in range(N-7):
+    for j in range(M-7):
+        is_it_black = 0
+        is_it_white = 0
 
+        for a in range(i, i+8):
+            for b in range(j, j+8):
+                if (a+b) % 2 == 0:
+                    if board[a][b] != 'B':
+                        is_it_black += 1
+                    if board[a][b] != 'W':
+                        is_it_white += 1
+                else:
+                    if board[a][b] != 'W':
+                        is_it_black += 1
+                    if board[a][b] != 'B':
+                        is_it_white += 1
+
+        result.append(is_it_black)
+        result.append(is_it_white)
+print(result)
+print(min(result))
 
 
 
