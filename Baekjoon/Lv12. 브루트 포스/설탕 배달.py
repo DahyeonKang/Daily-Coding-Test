@@ -12,16 +12,17 @@ except:
     print(-1)
 
 # 다른 분 코드
-x = int(input())
-a = 0
-while x >= 0:
-    if x % 5 == 0:
-        a += (x//5)
-        print(a)
+sugar = int(input())
+bag = 0
+while sugar >= 0 :
+    if sugar % 5 == 0 :  # 5의 배수이면
+        bag += (sugar // 5)  # 5로 나눈 몫을 구해야 정수가 됨
+        print\
+            (bag)
         break
-    x = x - 3
-    a = a + 1
-else:
+    sugar -= 3
+    bag += 1  # 5의 배수가 될 때까지 설탕-3, 봉지+1
+else :
     print(-1)
 
 
