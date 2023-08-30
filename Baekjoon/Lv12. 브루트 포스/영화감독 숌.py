@@ -12,3 +12,24 @@ while N:
     if '666' in str(i):
         N -= 1
 print(i)
+
+# ex) 666 1666 2666 3666 4666 5666 6660 6661 6662 6663 ....
+# 다른 분 코드
+N = int(input())
+li = []
+n = 0
+while len(li) <= N:
+    if not n % 10 == 6:
+        li.append(n*1000+666)
+    elif (n//10) % 100 == 66:
+        for k in range(1000):
+            li.append(n*1000+k)
+    elif (n//10) % 10 == 6:
+        for j in range(100):
+            li.append(n*1000+600+j)
+    else:
+        for i in range(10):
+            li.append(n*1000+660+i)
+    n += 1
+
+print(li[N-1])
