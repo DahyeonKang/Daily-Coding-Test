@@ -10,7 +10,7 @@ li.sort(key=lambda x: len(x))
 # li.sort(key=lambda x: (len(x), sorted(x)))
 print(*li, sep='\n')  # sys.stdout.write(''.join(lst))
 
-# 두개를 동시에 하는 건 안될까?
+# 두개를 동시에 하는 건 안될까? 답이 다르다..
 import sys
 N = int(input())
 li = list(set([sys.stdin.readline().strip() for _ in range(N)]))  # 중복 제거
