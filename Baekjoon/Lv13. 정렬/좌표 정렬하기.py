@@ -45,4 +45,3 @@ n = int(sys.stdin.readline())
 pos = [list(map(int, sys.stdin.readline().split())) for _ in range(n)]
 for line in sorted(pos):
     print(line[0],line[1])
-    
