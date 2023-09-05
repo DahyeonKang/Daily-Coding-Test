@@ -1,17 +1,17 @@
 ## 문제 : 상근이는 숫자 카드 N개를 가지고 있다. 정수 M개가 주어졌을 때, 이 수가 적혀있는 숫자 카드를 상근이가 가지고 있는지 아닌지를 구하는 프로그램을 작성하시오.
-#
-# # 내 코드 - 성공: list를 set으로 바꿨을 뿐인데 성공!
-# import sys
-# N = int(sys.stdin.readline())  # 상근 카드 개수
-# num = set(map(int, sys.stdin.readline().split())) # 숫자 카드에 적혀있는 정수들(중복 X)
-# M = int(sys.stdin.readline())  # 확인할 카드 개수
-# test = map(int, sys.stdin.readline().split())  # 확인할 카드 정수들
-#
-# for i in test:
-#     if i in num:
-#         print(1, end=" ")
-#     else:
-#         print(0, end=" ")
+
+# 내 코드 - 성공: list를 set으로 바꿨을 뿐인데 성공!
+import sys
+N = int(sys.stdin.readline())  # 상근 카드 개수
+num = set(map(int, sys.stdin.readline().split())) # 숫자 카드에 적혀있는 정수들(중복 X)
+M = int(sys.stdin.readline())  # 확인할 카드 개수
+test = map(int, sys.stdin.readline().split())  # 확인할 카드 정수들
+
+for i in test:
+    if i in num:
+        print(1, end=" ")
+    else:
+        print(0, end=" ")
 # for 문 아래로 대체 가능
 # for i in range(M):
 #     if test[i] in num:
