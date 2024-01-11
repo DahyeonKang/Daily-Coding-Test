@@ -215,4 +215,20 @@ WHERE col IS NOT NULL
 ```
 IS NULL은 NULL인 데이터를, IS NOT NULL은 NULL이 아닌 테이터를 조회한다.
 
+<br/>
+
+### JOIN
+1. INNER JOIN
+
+
+2. LEFT JOIN
+
+
+3.  RIGHT JOIN
+
+
+
+
+
+
 
