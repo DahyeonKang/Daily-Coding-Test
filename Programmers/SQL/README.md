@@ -126,6 +126,19 @@ QUARTER(col) #분기
 
 <br/>
 
+### SUBSTRING, LEFT, RIGHT
+SUBSTRING(문자열, 시작위치, 길이) : 지정한 위치에서 지정한 문자열 길이만큼 자를 때 사용  
+LEFT(문자열, 길이) : 왼쪽에서부터 지정한 문자열의 길이만큼 자를 때 사용  
+RIGHT(문자열, 길이) : 오른쪽에서부터 지정한 문자열의 길이만큼 자를 때 사용  
+```SQL
+SELECT SUBSTRING('ABCDEFG', 2, 3)
+SELECT LECT('ABCDEFG', 2)
+SELECT RIGHT('ABCDEFG', 5)
+```
+
+
+<br/>
+
 ### UNION
 여러 쿼리문을 하나로 합쳐 하나의 쿼리문으로 만들어주는 함수다. UNION은 중복된 값을 제거해 출력하고, UNION ALL은 중복된 값을 제거하지 않고 모두 출력한다.   
 UNION을 사용하려면 컬럼명 동일(같지 않으면 AS로 동일하게 맞춰줘야 함), 컬럼의 데이터 타입 동일, 출력할 컬럼 개수가 동일해야 한다.   
@@ -222,6 +235,15 @@ IS NULL은 NULL인 데이터를, IS NOT NULL은 NULL이 아닌 테이터를 조�
 
 <br/>
 
+### LOWER, UPPER
+문자열 전체를 소문자(LOWER), 대문자(UPPER)로 변환하는 함수이다 .
+```SQL
+SELECT LOWER(col), UPPER(col)
+SELECT LOWER('Hello This Is Me.'), UPPER('Hello This Is Me.')
+```
+
+<br/>
+
 ### JOIN
 1. INNER JOIN
 
@@ -231,7 +253,7 @@ IS NULL은 NULL인 데이터를, IS NOT NULL은 NULL이 아닌 테이터를 조�
 
 3.  RIGHT JOIN
 
-
+<br/>
 
 ## 응용
 
