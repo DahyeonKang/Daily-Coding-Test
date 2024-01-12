@@ -1,6 +1,11 @@
 # SQL 문법
 코딩테스트 대비 SQL 문법을 정리했습니다. 
 
+* 코드 실행 순서 : FROM > ON > JOIN > WHERE > GROUP BY > HAVING > SELECT > ORDER BY  
+STEP 1. 테이블 인식 : FROM  
+STEP 2. 테이블 구조 : JOIN ON-WHERE-GROUP BY- HAVING (⭐중요)  
+STEP 3. 테이블 조회 : SELECT-DISTINCT-ORDER BY-LIMIT  
+
 ### WHERE
 ```SQL
 SELECT col1, col2 FROM table
@@ -228,7 +233,17 @@ IS NULL은 NULL인 데이터를, IS NOT NULL은 NULL이 아닌 테이터를 조�
 
 
 
+## 응용
 
-
+Q. 주문량이 많은 아이스크림들 내림차순으로 조회하기
+```SQL
+SELECT A.FLAVOR
+FROM FIRST_HALF A
+JOIN JULY B ON A.FLAVOR = B.FLAVOR    
+GROUP BY A.FLAVOR
+ORDER BY A.TOTAL_ORDER+SUM(B.TOTAL_ORDER) DESC
+LIMIT 3;
+```
+GROUP BY로 아이스크림 종류를 묶은 뒤, ORDER BY로 아이스크림 종류 별로 매출을 계산해서 내림차순하는 코드이다.
 
 
